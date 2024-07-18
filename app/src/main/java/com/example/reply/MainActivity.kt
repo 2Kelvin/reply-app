@@ -49,12 +49,35 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// compact previews
 @Preview(showBackground = true)
 @Composable
 fun ReplyAppCompactPreview() {
     ReplyTheme {
         Surface {
             ReplyApp(windowSize = WindowWidthSizeClass.Compact)
+        }
+    }
+}
+
+// medium screens preview
+@Preview(showBackground = true, widthDp = 700)
+@Composable
+fun ReplyAppMediumPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp(windowSize = WindowWidthSizeClass.Medium)
+        }
+    }
+}
+
+// large screens preview
+@Preview(showBackground = true, widthDp = 1000)
+@Composable
+fun ReplyAppExpandedPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp(windowSize = WindowWidthSizeClass.Expanded)
         }
     }
 }
